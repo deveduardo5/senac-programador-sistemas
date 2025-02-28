@@ -2,6 +2,11 @@ namespace Login
 {
     public partial class Form1 : Form
     {
+        List<string> listaUsuarios = new List<string>() { "neymar.jr", "pablo.vitar", "sukuna.silva", "cristiano ronaldo"};
+        // ney posição 0; pablo posição 1; sukuna posição 2.
+        List<string> listaSenhas = new List<string>() { "bruna", "12345", "777" };
+
+
         public Form1()
         {
             InitializeComponent();
@@ -17,7 +22,6 @@ namespace Login
             string user = Usuario.Text;
             string senha = Senha.Text;
 
-            //if (user == null || user == "")
             if (string.IsNullOrWhiteSpace(user))
             {
                 Resultado.Text = "Usuário é obrigatório!";
@@ -32,10 +36,19 @@ namespace Login
                 return;
             }
 
-            if (user == "eduardo.souza" && senha == "12345")
+            int posicaoUsuarioEncontrado = -1;
+            for (int i = 0; i < listaUsuarios.Count; i++)
+            {
+                if (user == listaUsuarios[i])
+                {
+                    posicaoUsuarioEncontrado = i;
+                }
+            }
+
+            if (posicaoUsuarioEncontrado > -1 && senha == listaSenhas[posicaoUsuarioEncontrado])
             {
                 Resultado.Text = "Autenticado com sucesso!";
-                Resultado.ForeColor = Color.Green;
+                Resultado.ForeColor = Color.Green;                
             }
             
             else
