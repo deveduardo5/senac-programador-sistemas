@@ -34,6 +34,12 @@
             Senha = new TextBox();
             Login = new Button();
             Resultado = new Label();
+            identificação = new Label();
+            Segurança = new Label();
+            email = new TextBox();
+            senha2 = new TextBox();
+            acesso = new Button();
+            resultado2 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -46,7 +52,6 @@
             label1.Size = new Size(47, 15);
             label1.TabIndex = 0;
             label1.Text = "Usuário";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -91,11 +96,68 @@
             Resultado.TabIndex = 5;
             Resultado.Text = "label 1";
             // 
+            // identificação
+            // 
+            identificação.AutoSize = true;
+            identificação.Location = new Point(818, 278);
+            identificação.Name = "identificação";
+            identificação.Size = new Size(41, 15);
+            identificação.TabIndex = 6;
+            identificação.Text = "E-mail";
+            // 
+            // Segurança
+            // 
+            Segurança.AutoSize = true;
+            Segurança.Location = new Point(818, 323);
+            Segurança.Name = "Segurança";
+            Segurança.Size = new Size(39, 15);
+            Segurança.TabIndex = 7;
+            Segurança.Text = "Digito";
+            // 
+            // email
+            // 
+            email.Location = new Point(890, 275);
+            email.Name = "email";
+            email.Size = new Size(234, 23);
+            email.TabIndex = 8;
+            // 
+            // senha2
+            // 
+            senha2.Location = new Point(890, 315);
+            senha2.Name = "senha2";
+            senha2.Size = new Size(234, 23);
+            senha2.TabIndex = 9;
+            // 
+            // acesso
+            // 
+            acesso.Location = new Point(973, 344);
+            acesso.Name = "acesso";
+            acesso.Size = new Size(75, 23);
+            acesso.TabIndex = 10;
+            acesso.Text = "Acesso";
+            acesso.UseVisualStyleBackColor = true;
+            acesso.Click += acesso_Click;
+            // 
+            // resultado2
+            // 
+            resultado2.AutoSize = true;
+            resultado2.Location = new Point(818, 391);
+            resultado2.Name = "resultado2";
+            resultado2.Size = new Size(38, 15);
+            resultado2.TabIndex = 11;
+            resultado2.Text = "label5";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(647, 450);
+            ClientSize = new Size(1366, 450);
+            Controls.Add(resultado2);
+            Controls.Add(acesso);
+            Controls.Add(senha2);
+            Controls.Add(email);
+            Controls.Add(Segurança);
+            Controls.Add(identificação);
             Controls.Add(Resultado);
             Controls.Add(Login);
             Controls.Add(Senha);
@@ -104,7 +166,6 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Login :)";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,5 +178,11 @@
         private TextBox Senha;
         private Button Login;
         private Label Resultado;
+        private Label identificação;
+        private Label Segurança;
+        private TextBox email;
+        private TextBox senha2;
+        private Button acesso;
+        private Label resultado2;
     }
 }
